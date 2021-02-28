@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intitial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars fa-2x icon"></i>
+    </div>
+    <!-- Navigation -->
+    <nav id="main-nav"class="main-nav">
+        <div class="container">
+            <div class="left-nav">
+                <a href="#">Ebenezer Ademola</a>
+            </div>
+            <div class="right-nav">
+                <ul class="nav-links">
+                    <li><a href="#about" class="nav-btn">About</a></li>
+                    <li><a href="#resume" class="nav-btn">Resume</a></li>
+                    <li><a href="#projects" class="nav-btn">Projects</a></li>
+                    <li><a href="#contact" class="nav-btn">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Section: Introduction -->
+    <section class="intro bg-img">
+        <div class="intro-content">
+            <h1 class="title">EBENEZER ADEMOLA</h1>
+            <p class="subtitle">Junior Web Developer</p>
+        </div>  
+    </section>
+    <!-- Section: About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="card-content">
+                <h1>A LITTLE ABOUT ME</h1>
+                <div class="about-area">
+                    <div class="detail">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste consequuntur iusto minus quod beatae sequi eos at 
+                        cupiditate sit facere mollitia repellendus expedita fuga perspiciatis, molestias, repudiandae provident ut excepturi. 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed mollitia voluptas quasi, voluptatem distinctio minima delectus.
+                        Deleniti deserunt, cumque consectetur, facere labore nihil sit possimus facilis molestiae, voluptates officia laudantium.
+                    </div>
+                    <!--p>
+                    </p-->
+                    <div class="photo">
+                        <img src="images/profile.jpg" alt="Me">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- Resume -->
+    <section id="resume" class="resume">
+        <div class="container">
+            <div class="card-content">
+                <h1>RESUME</h1>
+                <div class="res-btn"><a href="#">Click Here to Open!</a></div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills and Technologies -->
+    <section class="tech">
+        <div class="container">
+            <div class="card-content">
+                <h1>SKILLS AND TECHNOLOGIES I'VE WORKED WITH</h1>
+                <ul class="tech-grid">
+                    <li><img src="images/html.png" alt="HTML"></li>
+                    <li><img src="images/css.png" alt="CSS"></li>
+                    <li><img src="images/javascript.png" alt="Javascript"></li>
+                    <li><img src="images/git.png" alt="Git"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Project -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="card-content">
+                <h1>PROJECTS</h1>
+                <div class="project-area">
+                    <div class="project-item">
+                        <img src="images/project.jpeg" alt="Project">
+                        <div class="overlay">
+                            <a href="#" class="project-title">Project #1</a>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <img src="images/project.jpeg" alt="Project">
+                        <div class="overlay">
+                            <a href="#" class="project-title">Project #2</a>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <img src="images/project.jpeg" alt="Project">
+                        <div class="overlay">
+                            <a href="#" class="project-title">Project #3</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="card-content">
+                <h1>CONTACT ME</h1>
+                <div class="contact-icon">
+                    <!--i class="far fa-comment"></i-->
+                    <i class="fas fa-at"></i>
+                </div>
+                <p class="contact-stmt">
+                    If you wan't to work together or just have a quick chat, feel free to shoot me an email and say hello!
+                </p>
+                <a href="#" class="contact-btn">Reach Out!</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <section class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!--h1>FOOTER</h1-->
+                <div class="social">
+                    <i class="fab fa-linkedin-in icon"></i>
+                    <i class="fab fa-github icon"></i>
+                    <i class="fab fa-instagram icon"></i>
+                </div>
+                
+                <p class="copyright">
+                    &copy; Ebenezer Ademola 2021
+                </p>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        const nav = document.querySelector('#main-nav');
+        const navTop = nav.offsetTop;
+        const width = window.matchMedia("(max-width: 850px)")
+
+        function stickyNavigation() { 
+            console.log('navTop = ' + navTop);
+            console.log('scrollY = ' + window.scrollY);
+        }
+
+        function addStick() {
+            if (window.scrollY > (navTop) || width.matches) {
+                console.log("addStick working")
+                nav.classList.add("sticky")
+            }
+            else {
+                console.log("addStick not working")
+                nav.classList.remove("sticky")
+            }
+        }
+
+        addStick();
+        window.addEventListener('scroll', addStick);
+        window.addEventListener('resize', addStick);
+        /*window.addEventListener('scroll', stickyNavigation);
+
+        const rightNav = document.querySelector(".right-nav")
+        const openMenu = document.querySelector(".menu-btn")
+
+        openMenu.addEventListener('click', showRightNav)
+        
+
+        function showRightNav() {
+            rightNav.style.display = "block"
+            console.log("show")
+            openMenu.addEventListener('click', function(){
+                rightNav.style.display = "none"
+                console.log("close")
+            })
+        }
+
+        function closeRightNav() {
+
+        }*/
+        document.querySelector('.menu-btn').addEventListener
+            ('click', function(){
+                document.querySelector('.nav-links').classList.toggle('show')
+                document.querySelector('.right-nav').classList.toggle('show')
+                console.log("menu-btn reg")
+            });
+
+        const el = document.querySelectorAll('.nav-btn')
+
+        for(var i=0; i < el.length; i++){
+            el[i].addEventListener('click', function () {
+                document.querySelector('.nav-links').classList.toggle('show')
+                document.querySelector('.right-nav').classList.toggle('show')
+                console.log("nav-btn reg")
+            }, false);
+           }
+        </script>
+
+</body>
+
+</html>
