@@ -59,6 +59,19 @@ a {
     transition: 0.4s ease;
 }
 
+.left-nav a {
+    padding-left: 50px;
+}
+
+.nav-logo {
+    cursor: pointer;
+    position: absolute;
+    top: -3px;
+    left: 0px;
+    z-index: 200;
+    width: 40px;
+}
+
 .right-nav .nav-btn
  {
     padding: 25px 18px;
@@ -423,6 +436,14 @@ a {
 
     .left-nav {
         padding: 0 25px 20px;
+    }
+    .nav-logo {
+        cursor: pointer;
+        position: absolute;
+        top: -3px;
+        left: 27px;
+        z-index: 200;
+        width: 40px;
     }
 
     .menu-btn {
