@@ -22,26 +22,6 @@ addStick();
 window.addEventListener('scroll', addStick);
 window.addEventListener('resize', addStick);
 
-        /*window.addEventListener('scroll', stickyNavigation);
-
-        const rightNav = document.querySelector(".right-nav")
-        const openMenu = document.querySelector(".menu-btn")
-
-        openMenu.addEventListener('click', showRightNav)
-        
-
-        function showRightNav() {
-            rightNav.style.display = "block"
-            console.log("show")
-            openMenu.addEventListener('click', function(){
-                rightNav.style.display = "none"
-                console.log("close")
-            })
-        }
-
-        function closeRightNav() {
-
-        }*/
 document.querySelector('.menu-btn').addEventListener ('click', function(){
     document.querySelector('.nav-links').classList.toggle('show')
     document.querySelector('.right-nav').classList.toggle('show')

@@ -128,7 +128,7 @@ a {
 .intro {
     position: relative;
     background-image: url('images/bgimg_intro.jpg');
-    min-height: 90vh;
+    min-height: 100vh;
     box-shadow: inset 120px 100px 250px #000, inset -120px -100px 250px #000;
 }
 
@@ -458,10 +458,6 @@ a {
         transition: 0.5s ease-in-out;
     }
 
-    .right-nav.show {
-        display: block;
-    }
-
     .nav-links {
         position: absolute;
         width: 100%;
@@ -474,7 +470,6 @@ a {
     }
 
     .nav-links.show {
-        display: flex;
         transform: translateY(0);
     }
 
